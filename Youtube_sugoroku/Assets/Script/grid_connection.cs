@@ -1,34 +1,15 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
+[CreateAssetMenu]
 
-public class grid_connection : MonoBehaviour
+public class grid_connection : ScriptableObject
 {
+    [SerializeField] string Station_name;
+    [SerializeField] List<GameObject> Station = new List<GameObject>();
     [SerializeField] int connection_number;
-    public GameObject[] Station = new GameObject[4];
-    [SerializeField] GameObject Arrow;
-    public GameObject ArrowPrefab;
 
-    private void OnValidate()
-    {
-        //foreach (Transform Arrow_Destroy in transform) Destroy(Arrow_Destroy);
-
-        EditorApplication.delayCall += DestroySelf;
-
-        Debug.Log("呼ばれたよ");
-        for (int i = 0; i < connection_number; i++)
-        {
-            Vector3 station_potision = Station[i].transform.position;
-            Arrow = Instantiate(ArrowPrefab, new Vector3(station_potision.x - transform.position.x, 0.8f, station_potision.z - transform.position.z),
-                Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z));
-            Arrow.transform.parent = this.transform;
-        }
-    }
-
-    private void DestroySelf()
-    {
-        EditorApplication.delayCall -= DestroySelf;
-        foreach (Transform Arrow_Destroy in transform) DestroyImmediate(Arrow_Destroy);
-    }
-
+    public int Connection_Number { get { return connection_number; } set { connection_number = value; } }
+    public List<GameObject> station { get { return Station; } set { Station = value; } }
+    public string station_name { get { return Station_name; } set { Station_name = value; } }
 }

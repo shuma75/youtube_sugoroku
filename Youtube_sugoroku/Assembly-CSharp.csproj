@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Grid.cs" />
+    <Compile Include="Assets\Script\Grid_Date.cs" />
     <Compile Include="Assets\Script\Player_Motion.cs" />
     <Compile Include="Assets\Script\arrow_facing.cs" />
     <Compile Include="Assets\Script\grid_connection.cs" />
