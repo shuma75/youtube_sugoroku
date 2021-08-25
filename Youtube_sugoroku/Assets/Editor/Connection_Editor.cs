@@ -30,5 +30,10 @@ public class Connection_Editor : Editor
             int decrease_number = list.Count - gricone.Connection_Number;
             for (int k = 0; k < decrease_number; k++) list.RemoveAt(len - 1);
         }
+        if (GUILayout.Button("保存"))
+        {
+            EditorUtility.SetDirty(gricone);
+            AssetDatabase.SaveAssets();
+        }
     }
 }
