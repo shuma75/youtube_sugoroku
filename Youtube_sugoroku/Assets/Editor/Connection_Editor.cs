@@ -24,13 +24,11 @@ public class Connection_Editor : Editor
         {
             int increase_number = gricone.Connection_Number - list.Count;
             for (int j = 0; j < increase_number; j++) list.Add(null);
-            Debug.Log("増えた");
         }
         else if (gricone.Connection_Number - list.Count < 0)
         {
             int decrease_number = list.Count - gricone.Connection_Number;
             for (int k = 0; k < decrease_number; k++) list.RemoveAt(len - 1);
-            Debug.Log("減った");
         }
     }
 }
