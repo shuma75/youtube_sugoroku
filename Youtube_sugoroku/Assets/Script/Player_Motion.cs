@@ -14,10 +14,10 @@ public class Player_Motion : MonoBehaviour
 
     void Update()
     {
-        if (transform.position - new Vector3(next_Station.transform.position.x, 0.3f, next_Station.transform.position.z) != Vector3.zero)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(next_Station.transform.position.x, 0.3f, next_Station.transform.position.z), Speed * Time.deltaTime);
-        }
-        Debug.Log(next_Station.transform.position);
+        //if (transform.position!= Vector3.zero)
+        //{
+        //    transform.position = Vector3.MoveTowards(transform.position, new Vector3(next_Station.transform.position.x, 0.3f, next_Station.transform.position.z), Speed * Time.deltaTime);
+        //}
+        //Debug.Log(next_Station.transform.position);
     }
 }

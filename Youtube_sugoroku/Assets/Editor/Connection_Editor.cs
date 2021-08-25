@@ -12,7 +12,6 @@ public class Connection_Editor : Editor
         gricone.station_name = EditorGUILayout.TextField("駅名", gricone.station_name);
         gricone.Connection_Number = EditorGUILayout.IntField("接続数", gricone.Connection_Number);
         List<string> list = gricone.station;
-
         int i, len = list.Count;
         for (i = 0; i < len; ++i)
         {
