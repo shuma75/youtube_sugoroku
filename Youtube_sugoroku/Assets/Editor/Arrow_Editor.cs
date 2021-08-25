@@ -16,10 +16,11 @@ public class Arrow_Editor : Editor
         arrow.station_Number = EditorGUILayout.IntField("行先の駅番号", arrow.station_Number);
         if (GUILayout.Button("位置調整"))
         {
-            Vector2 Arrow_position = new Vector2(arrow.grid_Connection.station[arrow.station_Number - 1].transform.position.x - arrow.transform.parent.transform.position.x,
-                arrow.grid_Connection.station[arrow.station_Number - 1].transform.position.z - arrow.transform.parent.transform.position.z).normalized;
+            GameObject Station = GameObject.Find(arrow.grid_Connection.station[arrow.station_Number - 1]);
+            Vector2 Arrow_position = new Vector2(Station.transform.position.x - arrow.transform.parent.transform.position.x,
+                Station.transform.position.z - arrow.transform.parent.transform.position.z).normalized;
             arrow.transform.position = arrow.transform.parent.transform.position + new Vector3(Arrow_position.x,1,Arrow_position.y);
-            arrow.transform.LookAt(new Vector3(arrow.grid_Connection.station[arrow.station_Number - 1].transform.position.x, 1, arrow.grid_Connection.station[arrow.station_Number - 1].transform.position.z));
+            arrow.transform.LookAt(new Vector3(Station.transform.position.x, 1, Station.transform.position.z));
             Debug.Log(Arrow_position);
         }
     }

@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552f2fae60a4d1d4bbfb342243cc61b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  station: {fileID: 11400000, guid: 5a563c122e5073a4cb106b0489aab7bc, type: 2}
+  station: {fileID: 11400000, guid: 2713399ae57866e4593a6136bb488d80, type: 2}
   Station_Number: 2
 --- !u!65 &1208991523
 BoxCollider:
@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552f2fae60a4d1d4bbfb342243cc61b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  station: {fileID: 11400000, guid: 5a563c122e5073a4cb106b0489aab7bc, type: 2}
+  station: {fileID: 11400000, guid: 2713399ae57866e4593a6136bb488d80, type: 2}
   Station_Number: 1
 --- !u!65 &1402425863
 BoxCollider:
