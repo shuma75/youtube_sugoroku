@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "MyScriptable/Create Arrow_Date")]
 public class Grid_Date : ScriptableObject
 {
-    
+    [SerializeField] ScriptableObject ScriptableObject;
+    [SerializeField] GameObject G;
 }

@@ -6,10 +6,14 @@ public class Arrow : MonoBehaviour
 {
     [SerializeField] grid_connection station;
     [SerializeField] int Station_Number = 1;
+    [SerializeField] float position_magnification = 0.5f;
+    [SerializeField] float Arrow_height = 2f;
     Player_Motion Next_Station;
 
     public grid_connection grid_Connection { get { return station; } set { station = value; } }
     public int station_Number { get { return Station_Number; } set { Station_Number = value; } }
+    public float arrow_height { get { return Arrow_height; } set { Arrow_height = value; } }
+    public float Position_magnification { get { return position_magnification; } set { position_magnification = value; } }
 
     private void Start()
     {
