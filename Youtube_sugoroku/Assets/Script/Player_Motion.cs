@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player_Motion : MonoBehaviour
 {
-    [SerializeField] float Speed = 2;
+    [SerializeField] float Speed = 4;
     [HideInInspector] public GameObject next_Station;
+    [HideInInspector] public string next_station_name;
+    [HideInInspector] public bool movable = false;
 
     private void Start()
     {
@@ -14,10 +14,14 @@ public class Player_Motion : MonoBehaviour
 
     void Update()
     {
-        //if (transform.position!= Vector3.zero)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, new Vector3(next_Station.transform.position.x, 0.3f, next_Station.transform.position.z), Speed * Time.deltaTime);
-        //}
-        //Debug.Log(next_Station.transform.position);
+        if (movable == true)
+        {
+            next_Station = GameObject.Find(next_station_name);
+            if (new Vector3(transform.position.x, 0.3f,transform.position.z) - new Vector3(next_Station.transform.position.x, 0.3f, next_Station.transform.position.z) != Vector3.zero)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(next_Station.transform.position.x, 0.3f, next_Station.transform.position.z), Speed * Time.deltaTime);
+            }
+            
+        }
     }
 }
