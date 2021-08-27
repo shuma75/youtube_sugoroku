@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+//ScriptableObjectの見た目
 [CustomEditor(typeof(grid_connection))]
 public class Connection_Editor : Editor
 {
@@ -11,6 +11,13 @@ public class Connection_Editor : Editor
 
         gricone.station_name = EditorGUILayout.TextField("駅名", gricone.station_name);
         gricone.Connection_Number = EditorGUILayout.IntField("接続数", gricone.Connection_Number);
+        EditorGUILayout.LabelField("位置");
+        gricone.station_position = EditorGUILayout.Vector3Field("",gricone.station_position);
+        if (GUILayout.Button("位置調整"))
+        {
+            GameObject current_station = GameObject.Find(gricone.station_name);
+            current_station.transform.position = gricone.station_position;
+        }
         List<string> list = gricone.station;
         int i, len = list.Count;
         for (i = 0; i < len; ++i)

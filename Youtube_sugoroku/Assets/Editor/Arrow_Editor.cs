@@ -19,7 +19,7 @@ public class Arrow_Editor : Editor
             Vector2 Arrow_position = new Vector2(Station.transform.position.x - arrow.transform.parent.transform.position.x,
                 Station.transform.position.z - arrow.transform.parent.transform.position.z).normalized * 2;
             arrow.transform.position = arrow.transform.parent.transform.position + new Vector3(Arrow_position.x,1.5f,Arrow_position.y);
-            arrow.transform.LookAt(new Vector3(Station.transform.position.x, 1.5f, Station.transform.position.z));
+            arrow.transform.LookAt(new Vector3(Station.transform.position.x, Station.transform.position.y + 1.5f, Station.transform.position.z));
             Debug.Log(Arrow_position);
         }
     }
