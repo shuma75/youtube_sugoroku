@@ -7,15 +7,17 @@ public class Player_Motion : MonoBehaviour
     [HideInInspector] public string next_station_name;
     [HideInInspector] public bool movable = false;
     private Vector3 previous_station_position;
+    roll_dice roll_Dice;
 
     private void Start()
     {
         next_Station.transform.position = transform.position;
+        roll_Dice = GameObject.Find("Dice_Manager").GetComponent<roll_dice>();
     }
 
     void Update()
     {
-        if (movable == true)
+        if (roll_Dice.dice_value > 0)
         {
             next_Station = GameObject.Find(next_station_name);
             if (new Vector3(transform.position.x, 0.3f,transform.position.z) - new Vector3(next_Station.transform.position.x, 0.3f, next_Station.transform.position.z) != Vector3.zero)
@@ -29,6 +31,7 @@ public class Player_Motion : MonoBehaviour
             {
                 transform.rotation = Quaternion.LookRotation(diff);
             }
+            roll_Dice.dice_value -= 1;
         }
     }
 }

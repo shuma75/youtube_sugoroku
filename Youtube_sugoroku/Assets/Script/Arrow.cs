@@ -17,12 +17,11 @@ public class Arrow : MonoBehaviour
 
     private void Start()
     {
-        Next_Station = GameObject.Find("train").GetComponent<Player_Motion>();
+        //Next_Station = GameObject.Find("train").GetComponent<Player_Motion>();
     }
 
     public void Click()
     {
-        Next_Station.movable = true;
         Debug.Log(station.station[Station_Number - 1]);
         Next_Station.next_station_name = station.station[Station_Number - 1];
     }

@@ -17,3 +17,4 @@ MonoBehaviour:
   - A-6
   - A-8
   connection_number: 2
+  Station_position: {x: 0, y: 0, z: -30}

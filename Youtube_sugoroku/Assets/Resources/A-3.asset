@@ -17,4 +17,4 @@ MonoBehaviour:
   - A-2
   - A-4
   connection_number: 2
-  A: []
+  Station_position: {x: 0, y: 0, z: -6}
