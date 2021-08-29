@@ -17,7 +17,7 @@ public class Arrow : MonoBehaviour
 
     private void Start()
     {
-        //Next_Station = GameObject.Find("train").GetComponent<Player_Motion>();
+        Next_Station = GameObject.Find("train").GetComponent<Player_Motion>();
     }
 
     public void Click()

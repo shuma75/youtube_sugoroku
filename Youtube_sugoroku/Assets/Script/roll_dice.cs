@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class roll_dice : MonoBehaviour
 {
     public Text dice_result;
-    public int dice_value;
+    public int dice_value = 0;
     // Start is called before the first frame update
     void Start()
     {

@@ -17,6 +17,7 @@ public class Player_Motion : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(roll_Dice.dice_value);
         if (roll_Dice.dice_value > 0)
         {
             next_Station = GameObject.Find(next_station_name);
