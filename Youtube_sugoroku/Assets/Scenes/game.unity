@@ -834,6 +834,7 @@ MonoBehaviour:
   next_Station: {fileID: 0}
   next_station_name: 
   movable: 0
+  Next_Station_position: {x: 0, y: 0, z: 0}
 --- !u!1 &175454110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ce6629c5905905a43863bd00611cf9db,
@@ -1363,7 +1364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397288545}
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 0, y: 0, z: -6}
+  m_LocalPosition: {x: -8, y: 5, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}

@@ -24,5 +24,12 @@ public class Arrow : MonoBehaviour
     {
         Debug.Log(station.station[Station_Number - 1]);
         Next_Station.next_station_name = station.station[Station_Number - 1];
+        grid_connection grid_Connection = Resources.Load<grid_connection>(station.station[Station_Number - 1]);
+        Next_Station.Next_Station_position = grid_Connection.station_position;
+    }
+
+    private void Update()
+    {
+        Next_Station.Train_motion();
     }
 }
